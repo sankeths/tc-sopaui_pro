@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE Nodes [
+
+<!ENTITY % NameValue "CDATA">
+<!ENTITY % PropType "(I|S|D|L|H|B)">
+<!ENTITY % VersionValue "CDATA">
+
+<!ELEMENT Prp (#PCDATA)>
+<!ELEMENT Node (Node|Prp)*>
+<!ELEMENT Nodes (Node)+>
+
+<!ATTLIST Nodes version CDATA "1">
+
+<!ATTLIST Node name CDATA #REQUIRED>
+
+<!ATTLIST Prp name CDATA #REQUIRED>
+<!ATTLIST Prp type CDATA #REQUIRED>
+<!ATTLIST Prp value CDATA #REQUIRED>
+]>
+<Nodes version="1">
+	<Node name="root">
+		<Node name="child data"/>
+		<Node name="units"/>
+		<Node name="message 3">
+			<Prp name="message" type="S" value="The test has passed. See Details for additional information."/>
+			<Prp name="line no" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="43503.4999737384"/>
+			<Prp name="unit id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="cmd.exe /C testrunner.bat  -s&quot;http://localhost TestSuite v2&quot; -c&quot;http://localhost TestCase 1&quot; -r -j -a -f&quot;C:\Users\SANKET~1\AppData\Local\Temp\{D581854A-CD43-4297-B909-82CFCBF1C894}&quot; -P&quot;rapi_input_username=sanketh.shanbhag@smartbear.com&quot; -P&quot;rapi_input_password=India@123&quot; -P&quot;rapi_input_orderId=2164&quot; -P&quot;rapi_input_productName=iPhone&quot; &quot;D:\OneDrive - SmartBear Software, Inc\Jenkins\Devops Build\TestComplete\TC-Soapui Pro Integration\TC-Soapui-Pro-Integration-readyapi-project.xml&quot;&#xA;Configuring log4j from [C:\Program Files\SmartBear\ReadyAPI-2.6.0\bin\soapui-log4j.xml]&#xA;11:59:46,204 INFO  [license] ReadyAPI 2.6.0 (build 2261) started - System properties: {OS=Windows 10, User name=Sanketh Shanbhag}&#xA;11:59:46,728 INFO  [DefaultSoapUICore] SoapUI settings were initialized from [C:\Users\Sanketh Shanbhag\soapui-settings.xml]&#xA;11:59:46,768 INFO  [SoapUIExtensionClassLoader] &quot;C:\Program Files\SmartBear\ReadyAPI-2.6.0\bin\ext\mysql-connector-java-8.0.11.jar&quot; has been added to the classpath.&#xA;11:59:46,769 INFO  [SoapUIExtensionClassLoader] &quot;C:\Program Files\SmartBear\ReadyAPI-2.6.0\bin\ext\postgresql-9.3-1102.jdbc41.jar&quot; has been added to the classpath.&#xA;11:59:46,769 INFO  [SoapUIExtensionClassLoader] &quot;C:\Program Files\SmartBear\ReadyAPI-2.6.0\bin\ext\sqljdbc42.jar&quot; has been added to the classpath.&#xA;11:59:46,859 INFO  [DefaultSoapUICore] 3 JDBC drivers have been registered from the directory bin/ext: [com.mysql.cj.jdbc.Driver, org.postgresql.Driver, com.microsoft.sqlserver.jdbc.SQLServerDriver].&#xA;11:59:47,145 WARN  [SoapUIProGroovyScriptEngineFactory] Missing scripts folder [C:\Program Files\SmartBear\ReadyAPI-2.5.0\bin\scripts]&#xA;11:59:47,147 INFO  [DefaultSoapUICore] Adding listeners from [C:\Program Files\SmartBear\ReadyAPI-2.6.0\bin\listeners\demo-listeners.xml]&#xA;11:59:51,815 WARN  [SoapUIProGroovyScriptEngineFactory] Missing scripts folder [C:\Program Files\SmartBear\ReadyAPI-2.5.0\bin\scripts]&#xA;11:59:52,168 DEBUG [LicenseManagerServiceImpl] Trying to initialize license for SoapUI&#xA;11:59:52,169 DEBUG [LicenseManagerServiceImpl] No license found for SoapUI&#xA;11:59:52,171 DEBUG [LicenseManagerServiceImpl] License host for SoapUI: SB-IN-SANKETH01&#xA;11:59:52,175 DEBUG [LicenseManagerServiceImpl] Trying to initialize license for SoapUI&#xA;11:59:52,185 DEBUG [LicenseManagerServiceImpl] License host for SoapUI: SB-IN-SANKETH01&#xA;11:59:52,256 DEBUG [LicenseManagerServiceImpl] Valid license file found: C:\Users\Sanketh Shanbhag\.soapui\soapui.key, last modified: 2019-02-01T13:27:40.157+0530&#xA;11:59:52,279 DEBUG [LicenseManagerServiceImpl] Trying to initialize license for LoadUI&#xA;11:59:52,294 DEBUG [LicenseManagerServiceImpl] License host for LoadUI: SB-IN-SANKETH01&#xA;11:59:52,295 DEBUG [LicenseManagerServiceImpl] Valid license file found: C:\Users\Sanketh Shanbhag\.loadui\loadUI.key, last modified: 2019-02-01T13:27:56.532+0530&#xA;11:59:52,321 DEBUG [LicenseManagerServiceImpl] Trying to initialize license for Secure&#xA;11:59:52,321 DEBUG [LicenseManagerServiceImpl] No license found for Secure&#xA;11:59:52,329 DEBUG [LicenseManagerServiceImpl] Trying to initialize license for ServiceV&#xA;11:59:52,337 DEBUG [LicenseManagerServiceImpl] License host for Secure: SB-IN-SANKETH01&#xA;11:59:52,338 DEBUG [LicenseManagerServiceImpl] License host for ServiceV: SB-IN-SANKETH01&#xA;11:59:52,343 DEBUG [LicenseManagerServiceImpl] Valid license file found: C:\Users\Sanketh Shanbhag\.readyapi\servicev.key, last modified: 2019-02-01T13:28:16.315+0530&#xA;11:59:54,256 INFO  [PluginManager] Adding plugin from [C:\Users\Sanketh Shanbhag\.soapui\plugins\ready-mqtt-plugin-1.0.1-dist.jar]&#xA;11:59:54,258 INFO  [PluginManager] Adding plugin from [C:\Users\Sanketh Shanbhag\.soapui\plugins\soapui-groovy-console-plugin-1.1-dist.jar]&#xA;11:59:54,258 INFO  [PluginManager] Adding plugin from [C:\Users\Sanketh Shanbhag\.soapui\plugins\ready-uxm-plugin-1.1.0.jar]&#xA;11:59:54,266 INFO  [PluginManager] Adding plugin from [C:\Users\Sanketh Shanbhag\.soapui\plugins\root.jar]&#xA;11:59:54,962 INFO  [PluginManager] Adding plugin from [C:\Users\Sanketh Shanbhag\.soapui\plugins\ready-jira-plugin-1.2.jar]&#xA;11:59:54,975 INFO  [PluginManager] 15 plugins loaded in 721 ms&#xA;11:59:54,975 INFO  [DefaultSoapUICore] All plugins loaded&#xA;11:59:55,398 INFO  [WsdlProject] Loaded project from [file:/D:/OneDrive%20-%20SmartBear%20Software,%20Inc/Jenkins/Devops%20Build/TestComplete/TC-Soapui%20Pro%20Integration/TC-Soapui-Pro-Integration-readyapi-project.xml]&#xA;11:59:55,754 WARN  [SoapUIProGroovyScriptEngineFactory] Missing scripts folder [C:\Program Files\SmartBear\ReadyAPI-2.5.0\bin\scripts]&#xA;11:59:55,784 INFO  [WsdlProject] Loaded project from [file:/D:/OneDrive%20-%20SmartBear%20Software,%20Inc/Jenkins/Devops%20Build/TestComplete/TC-Soapui%20Pro%20Integration/TC-Soapui-Pro-Integration-readyapi-project.xml]&#xA;11:59:55,802 WARN  [SoapUIProGroovyScriptEngineFactory] Missing scripts folder [C:\Program Files\SmartBear\ReadyAPI-2.5.0\bin\scripts]&#xA;11:59:55,804 INFO  [SoapUIProTestCaseRunner] Setting project property [rapi_input_username] to [sanketh.shanbhag@smartbear.com]&#xA;11:59:55,805 INFO  [SoapUIProTestCaseRunner] Setting project property [rapi_input_password] to [India@123]&#xA;11:59:55,805 INFO  [SoapUIProTestCaseRunner] Setting project property [rapi_input_orderId] to [2164]&#xA;11:59:55,806 INFO  [SoapUIProTestCaseRunner] Setting project property [rapi_input_productName] to [iPhone]&#xA;11:59:55,806 INFO  [SoapUIProTestCaseRunner] Running tests in the project [TC-Soapui Pro Integration]&#xA;11:59:55,817 INFO  [SoapUIProTestCaseRunner] Running TestCase [http://localhost TestCase 1]&#xA;11:59:55,826 INFO  [SoapUIProTestCaseRunner] Running TestCase [http://localhost TestCase 1]&#xA;11:59:55,851 INFO  [SoapUIProTestCaseRunner] running step [Request 1]&#xA;11:59:56,456 INFO  [SoapUIProTestCaseRunner] Assertion [Valid HTTP Status Codes] has status PASS&#xA;11:59:56,457 INFO  [SoapUIProTestCaseRunner] Assertion [Response SLA] has status PASS&#xA;11:59:56,457 INFO  [SoapUIProTestCaseRunner] Assertion [Match content of [name]] has status PASS&#xA;11:59:56,493 INFO  [SoapUIProTestCaseRunner] Finished running TestCase [http://localhost TestCase 1], time taken: 27ms, status: PASS&#xA;11:59:56,500 INFO  [SoapUIProTestCaseRunner] TestCase [http://localhost TestCase 1] finished with status [PASS] in 27ms&#xA;&#xA;ReadyAPI 2.6.0 TestCaseRunner Summary&#xA;-----------------------------&#xA;Time Taken: 695ms&#xA;Total TestSuites: 0&#xA;Total TestCases: 1 (0 failed)&#xA;Total TestSteps: 1&#xA;Total Request Assertions: 3&#xA;Total Failed Assertions: 0&#xA;Total Exported Results: 1&#xA;SystemId Unknown; Line #94; Column #76; C:\Users\SANKET~1\AppData\Local\Temp\{D581854A-CD43-4297-B909-82CFCBF1C894}\TC-Soapui Pro Integration\1_TC-Soapui Pro Integration.http:\localhost TestSuite v2.html (The filename, directory name, or volume label syntax is incorrect)&#xA;&#xA;11:59:57,465 INFO  [SoapUIProTestCaseRunner] Created report at file:/C:/Users/SANKET~1/AppData/Local/Temp/%7BD581854A-CD43-4297-B909-82CFCBF1C894%7D/index.html&#xA;11:59:57,466 INFO  [license] ReadyAPI 2.6.0 shutting down&#xA;&#xA;The test runner has exited with code 0."/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="id" type="I" value="3"/>
+		</Node>
+		<Node name="stack"/>
+		<Node name="message 2">
+			<Prp name="message" type="S" value="Request 1"/>
+			<Prp name="line no" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="43503.4999737269"/>
+			<Prp name="unit id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="Status: PASS&#xA;Time Taken: 27&#xA;Size: 163&#xA;Timestamp: Thu Feb 07 11:59:55 IST 2019&#xA;TestStep: Request 1&#xA;&#xA;----------------- Messages ------------------------------&#xA;&#xA;----------------- Properties ------------------------------&#xA;HTTP Version: HTTP/1.1&#xA;Endpoint: http://localhost/shoppingcart&#xA;Username: sanketh.shanbhag@smartbear.com&#xA;Method: GET&#xA;StatusCode: 200&#xA;URL: http://localhost/shoppingcart/api/get_order.php?type=json&amp;order_id=2164&amp;PHP_AUTH_USER=&amp;PHP_AUTH_PW=&#xA;Password: **************&#xA;&#xA;---------------- Request ---------------------------&#xA;Connection: [Keep-Alive]&#xA;User-Agent: [Apache-HttpClient/4.5.2 (Java/1.8.0_181)]&#xA;Host: [localhost]&#xA;Accept-Encoding: [gzip,deflate]&#xA;Content-Length: [0]&#xA;&#xA;GET http://localhost/shoppingcart/api/get_order.php?type=json&amp;order_id=2164&amp;PHP_AUTH_USER=&amp;PHP_AUTH_PW= HTTP/1.1&#xA;Accept-Encoding: gzip,deflate&#xA;Content-Length: 0&#xA;Host: localhost&#xA;Connection: Keep-Alive&#xA;User-Agent: Apache-HttpClient/4.5.2 (Java/1.8.0_181)&#xA;&#xA;&#xA;---------------- Response --------------------------&#xA;Keep-Alive: [timeout=5, max=100]&#xA;Server: [Apache/2.4.23 (Win64) OpenSSL/1.0.2l PHP/5.6.25]&#xA;Connection: [Keep-Alive]&#xA;#status#: [HTTP/1.1 200 OK]&#xA;Content-Length: [163]&#xA;Date: [Thu, 07 Feb 2019 06:29:56 GMT]&#xA;X-Powered-By: [PHP/5.6.25]&#xA;Content-Type: [application/json]&#xA;&#xA;[{&quot;id&quot;:&quot;2164&quot;,&quot;customer_id&quot;:&quot;1&quot;,&quot;name&quot;:&quot;iPhone&quot;,&quot;total_price&quot;:&quot;999.00&quot;,&quot;status&quot;:&quot;1&quot;,&quot;order_id&quot;:&quot;2164&quot;,&quot;quantity&quot;:&quot;1&quot;,&quot;price&quot;:&quot;999.00&quot;,&quot;paymenttype&quot;:&quot;offline pay&quot;}]&#xA;"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="7"/>
+			<Prp name="id" type="I" value="2"/>
+		</Node>
+		<Node name="message 1">
+			<Prp name="message" type="S" value="http://localhost TestCase 1"/>
+			<Prp name="line no" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="0"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="43503.4999737153"/>
+			<Prp name="unit id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="Time: 0.027"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="1"/>
+		</Node>
+		<Node name="message 0">
+			<Prp name="message" type="S" value="http://localhost TestSuite v2"/>
+			<Prp name="line no" type="I" value="-1"/>
+			<Prp name="owner id" type="I" value="-1"/>
+			<Prp name="link" type="S" value=""/>
+			<Prp name="child index" type="I" value="-1"/>
+			<Prp name="as html" type="B" value="0"/>
+			<Prp name="picture" type="S" value=""/>
+			<Prp name="date" type="D" value="43503.4999737153"/>
+			<Prp name="unit id" type="I" value="-1"/>
+			<Prp name="remarks" type="S" value="Tests: 1&#xA;Failures: 0&#xA;Errors: 0&#xA;Time: 0.027"/>
+			<Prp name="pictype" type="I" value="0"/>
+			<Prp name="priority" type="I" value="300"/>
+			<Prp name="type" type="I" value="0"/>
+			<Prp name="id" type="I" value="0"/>
+		</Node>
+		<Prp name="status" type="I" value="0"/>
+	</Node>
+</Nodes>

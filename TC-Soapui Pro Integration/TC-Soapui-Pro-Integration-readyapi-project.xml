@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="95a65108-0e16-4071-a44c-9fb32395cab9" created="2.6.0" activeEnvironment="Default environment" name="TC-Soapui Pro Integration" resourceRoot="" updated="2.6.0 2019-01-14T14:47:06Z" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings/>
+  <con:interface xsi:type="con:RestService" id="1e1bcaeb-74a0-41ca-bf19-01410d7951e9" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost/shoppingcart" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:settings/>
+    <con:definitionCache type="TEXT" rootPart=""/>
+    <con:endpoints>
+      <con:endpoint>http://localhost/shoppingcart</con:endpoint>
+    </con:endpoints>
+    <con:resource name="Get_order" path="/{type}/get_order" id="47a07ec5-a2d6-458d-9392-dc88de9c5f17">
+      <con:settings/>
+      <con:parameters>
+        <con:parameter>
+          <con:name>type</con:name>
+          <con:value>json</con:value>
+          <con:style>TEMPLATE</con:style>
+          <con:default>json</con:default>
+        </con:parameter>
+      </con:parameters>
+      <con:method name="Get_order" id="1199bf6e-16f4-423c-b0fb-63d6fef7d240" method="GET">
+        <con:settings/>
+        <con:parameters>
+          <con:parameter required="true">
+            <con:name>type</con:name>
+            <con:value>type</con:value>
+            <con:style>TEMPLATE</con:style>
+            <con:default>type</con:default>
+            <con:path xsi:nil="true"/>
+            <con:description xsi:nil="true"/>
+          </con:parameter>
+          <con:parameter required="true">
+            <con:name>order_id</con:name>
+            <con:value/>
+            <con:style>QUERY</con:style>
+            <con:default/>
+          </con:parameter>
+        </con:parameters>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html; charset=iso-8859-1</con:mediaType>
+          <con:status>404</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:representation type="FAULT">
+          <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+          <con:status>401</con:status>
+          <con:params/>
+          <con:element>html</con:element>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>text/html; charset=UTF-8</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+        </con:representation>
+        <con:representation type="RESPONSE">
+          <con:mediaType>application/json</con:mediaType>
+          <con:status>200</con:status>
+          <con:params/>
+          <con:element>Response</con:element>
+        </con:representation>
+        <con:request name="Request 1" id="5438710c-8660-45d1-9190-dfd11aab67bd" mediaType="application/json">
+          <con:settings>
+            <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          </con:settings>
+          <con:endpoint>http://localhost/shoppingcart</con:endpoint>
+          <con:request/>
+          <con:originalUri>http://localhost/type/get_order</con:originalUri>
+          <con:credentials>
+            <con:authType>No Authorization</con:authType>
+          </con:credentials>
+          <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+          <con:jmsPropertyConfig/>
+          <con:parameters>
+            <con:entry key="type" value="json"/>
+            <con:entry key="order_id" value="1"/>
+          </con:parameters>
+          <con:parameterOrder>
+            <con:entry>type</con:entry>
+            <con:entry>order_id</con:entry>
+          </con:parameterOrder>
+        </con:request>
+      </con:method>
+    </con:resource>
+  </con:interface>
+  <con:testSuite id="3877c222-5241-4c66-a1c4-dc3ae980983b" name="http://localhost TestSuite v1">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="f9cbfbc5-5647-46ac-bd36-be20f452bc8f" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="http://localhost TestCase 1" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="Request 1" id="7f210731-a775-44a0-87f1-100a0e05ceb9">
+        <con:settings/>
+        <con:config service="http://localhost/shoppingcart" resourcePath="/{type}/get_order" methodName="Get_order" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="5438710c-8660-45d1-9190-dfd11aab67bd" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost/shoppingcart</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/json/get_order/</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="421d8b3d-1065-4add-ac79-5f9d353c0d0d" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="00decbbd-3417-443b-830b-dd1f1c978c45" name="Response SLA">
+              <con:configuration>
+                <SLA>2000</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="1d7caa85-2206-457c-b98c-6c1216bd60fd" name="Match content of [name]">
+              <con:configuration>
+                <path>$[0]['name']</path>
+                <content>iPhone</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:username>sanketh.shanbhag@smartbear.com</con:username>
+              <con:password>India@123</con:password>
+              <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+              <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+              <con:authType>Global HTTP Settings</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="type" value="json"/>
+              <con:entry key="order_id" value="2162"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>type</con:entry>
+              <con:entry>order_id</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:testSuite id="20afa92d-58f5-490f-bd1b-f483fcc21aed" name="http://localhost TestSuite v2">
+    <con:settings/>
+    <con:savedRecentRuns>1</con:savedRecentRuns>
+    <con:runType>SEQUENTIAL</con:runType>
+    <con:testCase id="8765895d-1c00-4a82-9808-fd8c25aeeb8e" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="http://localhost TestCase 1" searchProperties="true" timeout="0">
+      <con:settings/>
+      <con:savedRecentRuns>1</con:savedRecentRuns>
+      <con:testStep type="restrequest" name="Request 1" id="407db0b7-7731-4f5d-bdc1-ac572e9e2549">
+        <con:settings/>
+        <con:config service="http://localhost/shoppingcart" resourcePath="/{type}/get_order" methodName="Get_order" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+          <con:restRequest name="Request 1" id="5438710c-8660-45d1-9190-dfd11aab67bd" mediaType="application/json">
+            <con:settings>
+              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+            </con:settings>
+            <con:endpoint>http://localhost/shoppingcart</con:endpoint>
+            <con:request/>
+            <con:originalUri>http://localhost/json/get_order/</con:originalUri>
+            <con:assertion type="Valid HTTP Status Codes" id="421d8b3d-1065-4add-ac79-5f9d353c0d0d" name="Valid HTTP Status Codes">
+              <con:settings/>
+              <con:configuration>
+                <codes>200</codes>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="Response SLA Assertion" id="00decbbd-3417-443b-830b-dd1f1c978c45" name="Response SLA">
+              <con:configuration>
+                <SLA>2000</SLA>
+              </con:configuration>
+            </con:assertion>
+            <con:assertion type="JsonPath Match" id="130b633e-9601-4e9d-8172-690855ef6c5a" name="Match content of [name]">
+              <con:configuration>
+                <path>$[0]['name']</path>
+                <content>${#Project#rapi_input_productName}</content>
+                <allowWildcards>false</allowWildcards>
+                <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+                <ignoreComments>false</ignoreComments>
+              </con:configuration>
+            </con:assertion>
+            <con:credentials>
+              <con:username>${#Project#rapi_input_username}</con:username>
+              <con:password>${#Project#rapi_input_password}</con:password>
+              <con:selectedAuthProfile>Basic</con:selectedAuthProfile>
+              <con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes>
+              <con:authType>Global HTTP Settings</con:authType>
+            </con:credentials>
+            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+            <con:jmsPropertyConfig/>
+            <con:parameters>
+              <con:entry key="type" value="json"/>
+              <con:entry key="order_id" value="${#Project#rapi_input_orderId}"/>
+            </con:parameters>
+            <con:parameterOrder>
+              <con:entry>type</con:entry>
+              <con:entry>order_id</con:entry>
+            </con:parameterOrder>
+          </con:restRequest>
+        </con:config>
+      </con:testStep>
+      <con:properties/>
+      <con:reportParameters/>
+    </con:testCase>
+    <con:properties/>
+    <con:reportParameters/>
+  </con:testSuite>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:properties>
+    <con:property>
+      <con:name>rapi_input_username</con:name>
+      <con:value>sanketh.shanbhag@smartbear.com</con:value>
+    </con:property>
+    <con:property>
+      <con:name>rapi_input_password</con:name>
+      <con:value>India@123</con:value>
+    </con:property>
+    <con:property>
+      <con:name>rapi_input_orderId</con:name>
+      <con:value>2158</con:value>
+    </con:property>
+    <con:property>
+      <con:name>rapi_input_productName</con:name>
+      <con:value>iPhone</con:value>
+    </con:property>
+  </con:properties>
+  <con:wssContainer/>
+  <con:databaseConnectionContainer/>
+  <con:jmsConnectionContainer/>
+  <con:oAuth2ProfileContainer/>
+  <con:oAuth1ProfileContainer/>
+  <con:reporting>
+    <con:xmlTemplates/>
+    <con:parameters/>
+  </con:reporting>
+  <con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest">
+    <con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// def token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// def token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// def headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script>
+  </con:eventHandlers>
+  <con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep">
+    <con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script>
+  </con:eventHandlers>
+  <con:authRepository/>
+  <con:tags/>
+</con:soapui-project>
